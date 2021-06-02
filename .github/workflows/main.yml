@@ -23,7 +23,7 @@ jobs:
         PASSPHRASE: ${{ secrets.PASSPHRASE }}
       with:
          source: "."
-         target: "/home/javier/${{ secrets.PATH }}"
+         target: "/home/javier/%PATH%"
     - name: Executing remote command
       uses: appleboy/ssh-action@master
       with:
@@ -34,5 +34,5 @@ jobs:
         PASSPHRASE: ${{ secrets.PASSPHRASE }}
         script: |
           nvm use 15.8.0
-          yarn --cwd ${{ secrets.PATH }}
-          pm2 restart ${{ secrets.NAME }}
+          yarn --cwd %PATH%
+          pm2 restart %NAME%
