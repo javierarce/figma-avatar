@@ -23,8 +23,7 @@ jobs:
         PASSPHRASE: ${{ secrets.PASSPHRASE }}
       with:
          source: "."
-         target: "/home/javier/figma_avatar"
-
+         target: "/home/javier/${{ secrets.PATH }}"
     - name: Executing remote command
       uses: appleboy/ssh-action@master
       with:
@@ -35,5 +34,5 @@ jobs:
         PASSPHRASE: ${{ secrets.PASSPHRASE }}
         script: |
           nvm use 15.8.0
-          yarn --cwd /home/javier/figma_avatar
-          pm2 restart figma-avatar
+          yarn --cwd ${{ secrets.PATH }}
+          pm2 restart ${{ secrets.NAME }}
