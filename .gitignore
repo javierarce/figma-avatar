@@ -1,0 +1,5 @@
+.env
+node_modules
+public/img
+sync.sh
+yarn.lock
