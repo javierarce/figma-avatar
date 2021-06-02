@@ -2,6 +2,8 @@
 
 Update your Twitter avatar and banner from the comfort of Figma.
 
+![](https://github.com/javierarce/figma-avatar/raw/main/avatar.gif)
+
 ### How to use this project
 
 **Important**: this project uses the Figma [Webhooks v2 API](https://www.figma.com/developers/api#webhooks_v2) which is in beta and only available for paid teams.
