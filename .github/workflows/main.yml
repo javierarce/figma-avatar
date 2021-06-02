@@ -24,7 +24,7 @@ jobs:
         DIRECTORY: ${{ secrets.DIRECTORY }}
       with:
          source: "."
-         target: $DIRECTORY
+         target: ${{ secrets.DIRECTORY }}
     - name: Executing remote command
       uses: appleboy/ssh-action@master
       with:
