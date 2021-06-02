@@ -24,13 +24,12 @@ jobs:
         DIRECTORY: ${{ secrets.DIRECTORY }}
       with:
          source: "."
-         target: "/home/javier/$DIRECTORY"
+         target: $DIRECTORY
     - name: Executing remote command
       uses: appleboy/ssh-action@master
-      env:
+      with:
         NAME: ${{ secrets.NAME }}
         DIRECTORY: ${{ secrets.DIRECTORY }}
-      with:
         host: ${{ secrets.HOST }}
         USERNAME: ${{ secrets.USERNAME }}
         PORT: ${{ secrets.PORT }}
