@@ -21,7 +21,6 @@ jobs:
         PORT: ${{ secrets.PORT }}
         KEY: ${{ secrets.SSHKEY }}
         PASSPHRASE: ${{ secrets.PASSPHRASE }}
-      env:
         DIRECTORY: ${{ secrets.DIRECTORY }}
       with:
          source: "."
