@@ -11,7 +11,6 @@ const Twitter = require('./lib/twitter')
 
 const app = express()
 const http = require('http').createServer(app)
-const io = require('socket.io')(http)
 
 const PASSCODE = process.env.PASSCODE
 const UPDATE_EVENT = 'FILE_VERSION_UPDATE'
