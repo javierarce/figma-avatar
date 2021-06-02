@@ -1,1 +1,1 @@
-# figma-history
+# Figma Avatar
