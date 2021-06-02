@@ -21,11 +21,16 @@ jobs:
         PORT: ${{ secrets.PORT }}
         KEY: ${{ secrets.SSHKEY }}
         PASSPHRASE: ${{ secrets.PASSPHRASE }}
+      env:
+        DIRECTORY: ${{ secrets.DIRECTORY }}
       with:
          source: "."
-         target: "/home/javier/%PATH%"
+         target: "/home/javier/$DIRECTORY"
     - name: Executing remote command
       uses: appleboy/ssh-action@master
+      env:
+        NAME: ${{ secrets.NAME }}
+        DIRECTORY: ${{ secrets.DIRECTORY }}
       with:
         host: ${{ secrets.HOST }}
         USERNAME: ${{ secrets.USERNAME }}
@@ -34,5 +39,5 @@ jobs:
         PASSPHRASE: ${{ secrets.PASSPHRASE }}
         script: |
           nvm use 15.8.0
-          yarn --cwd %PATH%
-          pm2 restart %NAME%
+          yarn --cwd ${{ secrets.DIRECTORY }}
+          pm2 restart ${{ secrets.NAME }}
