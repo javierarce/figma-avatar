@@ -1,6 +1,6 @@
 # Figma Avatar
 
-Update your Twitter avatar and background from the comfort of your… Figma.
+Update your Twitter avatar and banner from the comfort of Figma.
 
 
 ### How to use this project
@@ -15,4 +15,5 @@ Update your Twitter avatar and background from the comfort of your… Figma.
 4. Create a POST webhook:
 
 ```curl -X POST -H 'X-FIGMA-TOKEN: [FIGMA_TOKEN]' -H "Content-Type: application/json" 'https://api.figma.com/v2/webhooks' -d '{"event_type":"FILE_VERSION_UPDATE","team_id":"[TEAM_ID]","endpoint":"[YOUR_APP_ENDPOINT]/ping","passcode":"[PASSCODE]"}'```
+
 
