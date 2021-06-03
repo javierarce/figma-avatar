@@ -16,9 +16,11 @@ Update your Twitter avatar and banner from the comfort of Figma.
 - Your `FIGMA_TOKEN` and `PASSCODE` from the first step
 - Your `TEAM_ID`
 - Your `APP_ENDPOINT`
-- The `EVENT_TYPE` you want to use to trigger the avatar & banner change (for example: FILE_VERSION_UPDATE)
-  
-  ```curl -X POST -H 'X-FIGMA-TOKEN: [FIGMA_TOKEN]' -H "Content-Type: application/json" 'https://api.figma.com/v2/webhooks' -d '{"event_type":"[EVENT_TYPE]","team_id":"[TEAM_ID]","endpoint":"[APP_ENDPOINT]/ping","passcode":"[PASSCODE]"}'```
+- The `EVENT_TYPE` you want to use to trigger the avatar & banner change (for example: FILE_VERSION_UPDATE) 
+
+  ```bash 
+  curl -X POST -H 'X-FIGMA-TOKEN: [FIGMA_TOKEN]' -H "Content-Type: application/json" 'https://api.figma.com/v2/webhooks' -d '{"event_type":"    [EVENT_TYPE]","team_id":"[TEAM_ID]","endpoint":"[APP_ENDPOINT]/ping","passcode":"[PASSCODE]"}'
+  ```
 
 After these steps and whenever you add changes to the version history of your Figma file, your avatar and banner will get [magically] updated. 
 
